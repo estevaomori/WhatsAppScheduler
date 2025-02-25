@@ -30,6 +30,7 @@ def ativar_tela(counter):
         pyautogui.moveTo(100, 200)
         time.sleep(0.5)  # Pequena pausa para evitar falhas
         pyautogui.moveTo(neutral)
+        counter = 0
 
 def agendar_envio(contato, mensagem, data_hora):
     counter = 0
