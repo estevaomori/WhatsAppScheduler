@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+import ctypes  # Para evitar suspensão no Windows
 
 class WhatsAppSchedulerApp:
     def __init__(self, root):
@@ -47,7 +48,13 @@ class WhatsAppSchedulerApp:
         if not contato or not mensagem or not data_hora:
             messagebox.showerror("Erro", "Todos os campos devem ser preenchidos.")
         else:
-            # Chama a função agendar_envio do arquivo scheduler.py
+            self.manter_tela_ativa()
             from Scheduler import agendar_envio
             agendar_envio(contato, mensagem, data_hora)
+            messagebox.showinfo("Sucesso", "Mensagem agendada com sucesso!")
             self.root.withdraw()  # Oculta a janela suavemente
+
+    def manter_tela_ativa(self):
+        # Ativa o modo de "trabalho contínuo" para evitar suspensão
+        ctypes.windll.kernel32.SetThreadExecutionState(0x80000002)
+
