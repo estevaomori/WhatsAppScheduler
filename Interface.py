@@ -51,7 +51,6 @@ class WhatsAppSchedulerApp:
             self.manter_tela_ativa()
             from Scheduler import agendar_envio
             agendar_envio(contato, mensagem, data_hora)
-            messagebox.showinfo("Sucesso", "Mensagem agendada com sucesso!")
             self.root.withdraw()  # Oculta a janela suavemente
 
     def manter_tela_ativa(self):
