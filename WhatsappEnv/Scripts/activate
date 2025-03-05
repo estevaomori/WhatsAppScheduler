@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\estev\Trabalhos Faculdade\WhatsAppScheduledMessage\WhatsappEnv"
+VIRTUAL_ENV="C:\Users\estev\Trabalhos Faculdade\WhatsAppScheduler\WhatsAppEnv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -55,9 +55,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(WhatsappEnv) ${PS1:-}"
+    PS1="(WhatsAppEnv) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(WhatsappEnv) "
+    VIRTUAL_ENV_PROMPT="(WhatsAppEnv) "
     export VIRTUAL_ENV_PROMPT
 fi
 
